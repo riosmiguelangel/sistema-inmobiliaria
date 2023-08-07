@@ -1,0 +1,25 @@
+<!--{% extends 'administracion/base_administracion.html' %}-->
+{% load static %}
+{% block title %}Propiedades{% endblock%}
+{% block css %}
+    <link href="{% static '/css/jumbotron.css'%}" rel="stylesheet" type="text/css">
+{% endblock css %}
+
+{% block content %}
+   {% if message %}
+      <div class='alert alert-info'>
+        {{ message }}
+      </div>
+    {% endif %}
+
+    <h3>Upload a picture</h3> 
+    <form  role="form"  enctype="multipart/form-data" action="" method="POST" id="upload-image-form"> 
+        {% csrf_token %}
+        <!--{{ form.as_p }}-->
+        {% include 'administracion/propiedades/formUpload.html' %}
+    </form>
+
+{% endblock %}
+{% block javascript %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+{% endblock javascript %}S

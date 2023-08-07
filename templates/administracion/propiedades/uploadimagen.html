@@ -1,0 +1,10 @@
+{% extends 'administracion/base_administracion.html' %}
+{% block title %}Propiedades{% endblock%}
+
+{% block content %}
+  <form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+  <input type="file" name="images" multiple>
+  <button type="submit">Send</button>
+</form>    
+{% endblock %}

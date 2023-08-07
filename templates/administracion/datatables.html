@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Datatables</title>
+
+        <link href="{% static '/css/datatable.css'%}" rel="stylesheet" />
+
+        <!--Bootstrap -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet" />
+
+        <!--DataTables.css -->
+        <link href="https://cdn.datatables.net/1.13.5/css/dataTables.bootstrap5.min.css" rel="stylesheet" />
+
+
+       
+        <link href="{% static '/css/styles.css'%}" rel="stylesheet" />
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <h1>datatables</h1> 
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                    <div class="table-responsive">
+                        <table id="datatable-propiedades" class="table">
+                            <caption>
+                                Listado de propiedades
+                            </caption>
+                            <thead>
+                                <tr>
+                                    <th class="centered">#</th>
+                                    <th class="centered">Id</th>
+                                    <th class="centered">Codigo</th>
+                                    <th class="centered">Direccion</th>
+                                    <th class="centered">Operacion</th>
+                                    <th class="centered">Propiedad</th>
+                                    <th class="centered">Provincia</th>
+                                    <th class="centered">Barrio</th>
+                                    <th class="centered">Amb</th>
+                                    <th class="centered">Valor</th>
+                                    <th class="centered">Fecha de Alta</th>
+                                    <th class="centered">Accion</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tableBody_propiedades"> 
+
+                            </tbody>
+
+                        </table>
+
+                
+
+                </div>
+            </div>
+        </div>
+    
+
+        <!--Bootstrap.js -->
+        <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+       
+        <!--jQuery -->
+        <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+
+        <!--DataTables.js -->
+        <script src="https://cdn.datatables.net/1.13.5/js/jquery.dataTables.min.js"></script>
+        <script src=" https://cdn.datatables.net/1.13.5/js/dataTables.bootstrap5.min.js"></script>
+
+        <script src="{% static '/js/datatables.js'%}"></script>
+
+
+
+    </body>
+</html>

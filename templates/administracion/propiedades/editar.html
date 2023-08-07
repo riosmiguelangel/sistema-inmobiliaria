@@ -1,0 +1,18 @@
+{% extends 'administracion/base_administracion.html'%}
+{% block title %}Adriana Rando{% endblock%}
+
+{% block content %}
+<ol class="breadcrumb mb-4">
+    <li class="breadcrumb-item"><a href="{% url 'propiedades_index' %}">Administracion</a></li>
+    <li class="breadcrumb-item active">Editar Propiedades</li>
+</ol>
+
+<div class="card">
+    <div class="card-body">
+        <form action="" method="post">
+            {% csrf_token %}
+            {% include 'administracion/propiedades/form.html' %}
+        </form>
+    </div>
+</div>
+{% endblock %}

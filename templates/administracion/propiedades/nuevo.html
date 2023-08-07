@@ -1,0 +1,19 @@
+{% extends 'administracion/base_administracion.html' %}
+{% block title %}Propiedades{% endblock%}
+
+{% block content %}
+<ol class="breadcrumb mb-4">
+    <li class="breadcrumb-item"><a href="{% url 'propiedades_index' %}">Administracion</a></li>
+    <li class="breadcrumb-item active">Nueva Propiedad</li>
+</ol>
+
+<div class="card">
+    <div class="card-body">
+        <form action="" method="post" novalidate enctype="multipart/form-data">
+            {% csrf_token %}
+            {% include 'administracion/propiedades/form.html' %}
+        </form>
+        {% include 'administracion/propiedades/formUpload.html' %}
+    </div>
+</div>
+{% endblock %}

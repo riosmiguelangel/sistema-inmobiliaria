@@ -2,7 +2,7 @@ from django.contrib import admin
 
 # Register your models here.
 from administracion.models import TipoOperacion,Propiedades
-from administracion.models import TipoAmbientes,TipoBarrio,TipoPropiedad,TipoProvincia, ImagenesPropiedades
+from administracion.models import TipoAmbientes,TipoBarrio,TipoPropiedad,TipoProvincia, ImagenesPropiedades, Prueba
 from django.contrib.auth.models import Group,User
 # from django.contrib.auth.admin import GroupAdmin, UserAdmin
 
@@ -12,7 +12,7 @@ class ImagenesPropiedadAdmin(admin.TabularInline):
 
 class PropiedadesAdmin(admin.ModelAdmin):
     list_display = ('id','codigo_interno','descripcion','tipo_operacion', )
-    list_filter = ['tipo_operacion',  'tipo_propiedad','tipo_ambiente']
+    list_filter = ['tipo_operacion'  'tipo_propiedad','tipo_ambiente',]
     search_fields = ['id', 'codigo_interno']
     list_per_page = 5  
     inlines= [
@@ -44,7 +44,7 @@ class ProvinciasAdmin(admin.ModelAdmin):
     list_display = ('id', 'descripcion')
 
 class PruebaAdmin(admin.ModelAdmin):
-     list_display = ('id', 'nombre')
+     list_display = ('id', 'titulo')
 
 
 
@@ -57,4 +57,5 @@ admin.site.register(TipoBarrio,TipoBarrioAdmin)
 admin.site.register(TipoOperacion,TipoOperacionAdmin)
 admin.site.register(TipoPropiedad,TipoPropiedadAdmin)
 admin.site.register(TipoProvincia,TipoProvinciaAdmin)
+admin.site.register(Prueba,PruebaAdmin)
 

@@ -195,7 +195,11 @@ class TipoBarrio(models.Model):
 
     def __str__(self):
         return self.descripcion
+    
 
+class Prueba(models.Model):
+    titulo = models.CharField()
+    
 
 class TipoOperacion(models.Model):
     descripcion = models.CharField(max_length=45)
